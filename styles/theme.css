@@ -1,0 +1,64 @@
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary: #1E90FF;
+  --primary-foreground: #ffffff;
+  --secondary: #1B2430;
+  --secondary-foreground: #ffffff;
+  --accent: #C0C0C0;
+  --muted: #555555;
+  --card: #1B2430;
+  --ring: #1E90FF;
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: #1B2430;
+  --foreground: #ffffff;
+  --primary: #1E90FF;
+  --primary-foreground: #000000;
+  --secondary: #2E3B4E;
+  --secondary-foreground: #ffffff;
+  --accent: #888888;
+  --muted: #333333;
+  --card: #2E3B4E;
+  --ring: #4682B4;
+  --radius: 0.625rem;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card {
+  background-color: var(--card);
+  color: var(--foreground);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+}
+
+.button {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--ring);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
