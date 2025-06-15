@@ -4,21 +4,25 @@
 import { useWallet } from "@solana/wallet-adapter-react";
 import LivePriceWidget from "@/components/LivePriceWidget";
 
-<LivePriceWidget />
-
 export default function OptikGPT() {
   const { publicKey } = useWallet();
 
   return (
     <main className="min-h-screen bg-black text-white p-8">
-      <h1 className="text-4xl font-bold text-center text-blue-500 mb-6">🤖 Optik GPT Assistant</h1>
+      <h1 className="text-4xl font-bold text-center text-blue-500 mb-6">
+        🤖 Optik GPT Assistant
+      </h1>
+
+      <div className="mb-6">
+        <LivePriceWidget />
+      </div>
 
       {publicKey ? (
         <>
           <p className="text-sm text-muted-foreground mb-4 text-center">
             Connected as: {publicKey.toBase58()}
           </p>
-          <iframe>
+          <iframe
             src="https://chat.optikcoin.ai"
             className="w-full h-[600px] rounded-lg border border-gray-800"
             sandbox="allow-scripts allow-same-origin allow-popups"
