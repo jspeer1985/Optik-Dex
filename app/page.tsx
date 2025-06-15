@@ -29,12 +29,14 @@ export default function Home() {
         </p>
 
         <div className="flex justify-center gap-4">
-          <Button asChild>
-            <Link href="/exchange">Start Trading</Link>
-          </Button>
-          <Button variant="accent" asChild>
-            <Link href="/airdrops">Claim Airdrop</Link>
-          </Button>
+          <Link href="/exchange">
+            <Button>Start Trading</Button>
+          </Link>
+          <Link href="/airdrops">
+            <Button variant="accent">Claim Airdrop</Button>
+          </Link>
+
+          
         </div>
 
         <Countdown />
